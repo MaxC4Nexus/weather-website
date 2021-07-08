@@ -9,7 +9,7 @@ const forecast = (long, lat, callback) => {
         }  else if(body.error) {
             callback("Unable to find location! Check coordinates and try again!", undefined);
         } else {
-            callback(undefined, "It is currently " + body.current.temperature + "C degrees out there. There is " + body.current.precip + "% chance of raining.");
+            callback(undefined, "It is currently " + body.current.temperature + "C degrees out there. There is " + body.current.precip + "% chance of raining. It feels like " + body.current.feelslike + "C degrees. The humidity is " + body.current.humidity);
         }
     });
 };
